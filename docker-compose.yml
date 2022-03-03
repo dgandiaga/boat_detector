@@ -1,0 +1,12 @@
+services:
+  process_video:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.process_video
+    container_name: process_video
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    volumes:
+      - ./videos/:/code/videos/
+    command: 'python main.py'
+    runtime: nvidia
