@@ -5,6 +5,8 @@ This repository performs boat detection on videos using a pretrained **YOLOv5** 
 
 ![boat_detection](https://user-images.githubusercontent.com/26325749/156657844-a128e28d-38b5-484b-8384-c7d63fcfb314.gif)
 
+You can download the processed video with the detections and the boat count from here: https://drive.google.com/file/d/1l34qD0wPzWMvHApynKbzUEaT5h2JAddR/view?usp=sharing
+
 # Usage
 
 Models and videos are not included in the repo due to their size. You can download them from Drive:
