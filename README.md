@@ -55,10 +55,13 @@ This repository uses a combination of detection using **YOLOv5** and tracking us
 
 On the other side, **CSRT** is a tracking tool that is able to track a bounding box regardless what it contains. The downside of this is that trackers tend to accumulate errors becase they try to follow all the bounding box and not only the boat, and sometimes they get stucked tracking a piece of background. Here I have an example using only tracking, once every boat is detected I apply a mask on the image so the detector doesn't return this boat again and the CSRT tracker takes the lead until it loses the bounding box.
 
-![boat_only_tracking](https://user-images.githubusercontent.com/26325749/156661276-6f7700ee-6e91-4a97-a46a-73748a9c739e.gif)
+![boat_tranking_only](https://user-images.githubusercontent.com/26325749/156663507-7daf0b81-92ff-4e61-8a31-3ddd1660bf9b.gif)
+
 
 You can see that the tracker is able of keeping the boat, but it accumulates errors and finally the boat gets out of the image and the bounding box is still stucked tracking part of the background. Also you can see on the second boat that in its first detection the bounding box is too big and the tracker only focuses on the background, so when the boat gets out of it it gets detected again as a new boat.
 
 The solution is a combination of both approaches. The final version of the project uses detection when it can, and when it looses an object it switches to tracking, so when it appears again the system is able to match it with the previous detection at the same time that the detector's feedback keeps the tracker uner control so it doesn't grow wild. Here it is the same clip with this version of the project, in green when it's getting detected by the YOLO and in red when it's being followed by the CSRT.
 
-![detection_boats_first](https://user-images.githubusercontent.com/26325749/156662391-0986130e-1828-47ba-9b44-109a9e91c24d.gif)
+![boat_detection_first](https://user-images.githubusercontent.com/26325749/156663011-bf2f0147-cc58-45da-8381-8e94535070fe.gif)
+
+
