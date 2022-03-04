@@ -1,6 +1,6 @@
 # Boat Detection and Tracking on videos using YOLOv5 and CSRT tracking
 
-This repository performs boat detection on videos using a pretrained **YOLOv5** (https://pytorch.org/hub/ultralytics_yolov5/) and **CSRT tracking** (https://docs.opencv.org/3.4/d2/da2/classcv_1_1TrackerCSRT.html).
+This repository performs boat detection on videos using a pretrained **YOLOv5** (https://pytorch.org/hub/ultralytics_yolov5/) and **CSRT tracking** (https://docs.opencv.org/3.4/d2/da2/classcv_1_1TrackerCSRT.html). The goal is detecting every boat and tracking them so the system can keep the count on **how many different boats it has seen**.
 
 
 ![boat_detection](https://user-images.githubusercontent.com/26325749/156657844-a128e28d-38b5-484b-8384-c7d63fcfb314.gif)
